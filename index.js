@@ -10,12 +10,13 @@ app.get('/', function(request, response) {
   response.send('Hello World!')
 });
 
-app.get('/users', function(req, res) {
-  // Hard coding for simplicity. Pretend this hits a real database
+app.get('/tripPlan', function(req,res){
+  //hard coding for simplicity. Pretend this hits a real database
   res.json([
-    {"id": 1,"firstName":"Bob","lastName":"Smith","email":"bob@gmail.com"},
-    {"id": 2,"firstName":"Tammy","lastName":"Norton","email":"tnorton@yahoo.com"},
-    {"id": 3,"firstName":"Tina","lastName":"Lee","email":"lee.tina@hotmail.com"}
+    {"id":1, "startCity":"Boston", "endCity":"New York", "period":"05.21-05.23"},
+    {"id":2, "startCity":"New York", "endCity":"Bozeman", "period":"05.23-05.24"},
+    {"id":3, "startCity":"Bozeman", "endCity":"Montana", "period":"05.24-05.26"},
+    {"id":4, "startCity":"Montana", "endCity":"Wyoming", "period":"05.26-05.27"}
   ]);
 });
 
